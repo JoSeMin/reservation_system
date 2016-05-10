@@ -34,5 +34,20 @@ public class MainActivity extends AppCompatActivity {
         textResult = (TextView)findViewById(R.id.text_result);
         timePick.setVisibility(View.INVISIBLE);
         calView.setVisibility(View.INVISIBLE); //invisible이 화면에 보이지 않게 하는 것
+
+        radioDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calView.setVisibility(View.VISIBLE);//보이게
+                timePick.setVisibility(View.INVISIBLE);//안보이게
+            }
+        });
+        radioTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calView.setVisibility(View.INVISIBLE);
+                timePick.setVisibility(View.VISIBLE);
+            }
+        });
     }
 }
